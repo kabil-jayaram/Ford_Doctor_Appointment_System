@@ -32,6 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
+### Java ###
 *.class
 *.properties
 *.xml

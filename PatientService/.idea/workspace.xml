@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="" />
+    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../DoctorService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/entity/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/entity/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/entity/TimeSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/entity/TimeSlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +22,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2dLZryxt6FVEXUGpdvkRakgKxv7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,7 +34,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "kabilan",
     "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -36,6 +50,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-temurin-17.0.10-f644763e9732-2dd12e70" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -33,6 +33,11 @@ public class AppointmentService implements IAppointmentService{
     }
 
     @Override
+    public List<Appointment> getAppointmentByStatus(String status) {
+        return appointmentRepository.findAllByStatus(status);
+    }
+
+    @Override
     public Appointment updateAppointment(Appointment appointment) {
         return appointmentRepository.save(appointment);
     }
@@ -41,10 +46,5 @@ public class AppointmentService implements IAppointmentService{
     public Boolean deleteAppointment(int id) {
         appointmentRepository.deleteById(id);
         return true;
-    }
-
-    @Override
-    public List<Appointment> getAppointmentByStatus(String status) {
-        return appointmentRepository.findAllByStatus(status);
     }
 }
