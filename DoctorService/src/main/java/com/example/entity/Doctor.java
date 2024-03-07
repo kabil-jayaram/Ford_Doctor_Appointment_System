@@ -1,13 +1,15 @@
 package com.example.entity;
 
 import javax.persistence.*;
+
+import com.example.dto.AppointmentDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.Map;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
