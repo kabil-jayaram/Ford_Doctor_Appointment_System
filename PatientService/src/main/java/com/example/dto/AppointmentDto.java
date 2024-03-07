@@ -1,15 +1,15 @@
-package com.example.entity;
+package com.example.dto;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Appointment {
+public class AppointmentDto {
     private int id;
     private int patientId;
     private int doctorId;
