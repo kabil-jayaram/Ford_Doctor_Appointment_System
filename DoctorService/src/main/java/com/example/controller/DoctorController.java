@@ -38,7 +38,7 @@ public class DoctorController {
         return doctorService.getDoctorByIdAndSpecialization(doctor.getId(), doctor.getSpecialization());
     }
     @DeleteMapping("/doctor/{id}")
-    public String deletelDoctor(@PathVariable("id") int id)
+    public String deleteDoctor(@PathVariable("id") int id)
     {
         doctorService.deleteDoctor(id);
         return "Doctor details deleted successfully !!!";
