@@ -34,5 +34,3 @@ build/
 
 ### Java ###
 *.class
-*.properties
-*.xml
