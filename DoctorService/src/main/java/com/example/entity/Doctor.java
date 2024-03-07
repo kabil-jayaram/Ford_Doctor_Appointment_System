@@ -11,7 +11,7 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="doctor")
+@Table(name="doctors")
 public class Doctor {
 
     @Id
