@@ -21,5 +21,6 @@ public class Doctor {
     private String specialization;
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Appointment> appointmentsList;
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Map<Integer,Boolean> timeSlot;
 }
