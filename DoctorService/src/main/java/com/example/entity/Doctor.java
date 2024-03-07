@@ -11,7 +11,7 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="doctors")
+@Table(name="doctor")
 public class Doctor {
 
     @Id
@@ -22,5 +22,5 @@ public class Doctor {
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Appointment> appointmentsList;
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Map<Integer,Boolean> timeSlot;
+    private List<TimeSlot> timeSlot;
 }
