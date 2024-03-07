@@ -1,5 +1,4 @@
-package DoctorService.src.main.java.com.example.entity;
-
+package com.example.entity;
 import java.time.LocalDate;
 
 public class Appointment {
