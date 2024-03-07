@@ -12,6 +12,7 @@ public class AppointmentService implements IAppointmentService{
 
     @Autowired
     private AppointmentRepository appointmentRepository;
+
     @Override
     public Appointment addAppointment(Appointment appointment) {
         return appointmentRepository.save(appointment);
