@@ -1,5 +1,4 @@
 package com.example.entity;
-
 import java.time.LocalDate;
 
 public class Appointment {
