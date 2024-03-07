@@ -14,32 +14,38 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
+    @PostMapping("/doctors")
+    public Doctor addDoctors(@RequestBody Doctor doctor) {
+        return doctorService.addDoctor(doctor);
+    }
+
+    @PutMapping("/doctors")
+    public Doctor updateDoctors(@RequestBody Doctor doctor) {
+        return doctorService.updateDoctor(doctor);
+    }
+
     @GetMapping("/doctors")
-    public List<Doctor> getDoctors()
-    {
+    public List<Doctor> getDoctors() {
         return doctorService.getAllDoctor();
     }
 
     @GetMapping("/doctor/{id}")
-    public Doctor getDoctorById(@PathVariable("id") int id)
-    {
+    public Doctor getDoctorById(@PathVariable("id") int id) {
         return doctorService.getDoctoryById(id);
     }
 
     @GetMapping("/doctor/specialization")
-    public Doctor getDoctorBySpecialization(@RequestBody Doctor doctor)
-    {
+    public Doctor getDoctorBySpecialization(@RequestBody Doctor doctor) {
         return doctorService.getDoctorBySpecialization(doctor.getSpecialization());
     }
 
     @GetMapping("/doctor")
-    public Doctor getDoctorByIdAndSpecialization(@RequestBody Doctor doctor)
-    {
+    public Doctor getDoctorByIdAndSpecialization(@RequestBody Doctor doctor) {
         return doctorService.getDoctorByIdAndSpecialization(doctor.getId(), doctor.getSpecialization());
     }
+
     @DeleteMapping("/doctor/{id}")
-    public String deleteDoctor(@PathVariable("id") int id)
-    {
+    public String deleteDoctor(@PathVariable("id") int id) {
         doctorService.deleteDoctor(id);
         return "Doctor details deleted successfully !!!";
     }
