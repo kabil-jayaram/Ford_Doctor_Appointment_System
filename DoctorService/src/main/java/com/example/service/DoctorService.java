@@ -1,7 +1,9 @@
 package com.example.service;
 
 import com.example.entity.Doctor;
+import com.example.entity.TimeSlot;
 import com.example.repository.DoctorRepository;
+import com.example.repository.TimeSlotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,10 @@ public class DoctorService implements IDoctorService{
 
     @Autowired
     private DoctorRepository doctorRepository;
+
+    @Autowired
+    private TimeSlotRepository timeSlotRepository;
+
     @Override
     public Doctor addDoctor(Doctor doctor) {
 
@@ -19,7 +25,20 @@ public class DoctorService implements IDoctorService{
 
     @Override
     public Doctor updateDoctor(Doctor doctor) {
-        return doctorRepository.save(doctor);
+        Doctor existingDoctor = doctorRepository.findById(doctor.getId()).get();
+
+        existingDoctor.setName(doctor.getName());
+        existingDoctor.setSpecialization(doctor.getSpecialization());
+
+        List<TimeSlot> updatedTimeSlots = existingDoctor.getTimeSlot();
+        for (TimeSlot timeSlot : updatedTimeSlots) {
+            TimeSlot existingTimeSlot = timeSlotRepository.findById(timeSlot.getId()).get();
+            existingTimeSlot.setStartTime(timeSlot.getStartTime());
+            existingTimeSlot.setEndTime(timeSlot.getEndTime());
+            existingTimeSlot.setAvailable(timeSlot.isAvailable());
+        }
+
+        return doctorRepository.save(existingDoctor);
     }
 
     @Override
