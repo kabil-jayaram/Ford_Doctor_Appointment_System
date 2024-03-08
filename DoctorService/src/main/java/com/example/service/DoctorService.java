@@ -1,15 +1,18 @@
 package com.example.service;
 
+import com.example.dto.DoctorDto;
 import com.example.entity.Doctor;
 import com.example.entity.TimeSlot;
+import com.example.mapper.DoctorMapper;
 import com.example.repository.DoctorRepository;
 import com.example.repository.TimeSlotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class DoctorService implements IDoctorService{
+public class DoctorService implements IDoctorService {
 
     @Autowired
     private DoctorRepository doctorRepository;
@@ -19,7 +22,6 @@ public class DoctorService implements IDoctorService{
 
     @Override
     public Doctor addDoctor(Doctor doctor) {
-
         return doctorRepository.save(doctor);
     }
 
@@ -42,24 +44,25 @@ public class DoctorService implements IDoctorService{
     }
 
     @Override
-    public List<Doctor> getAllDoctor() {
-        return doctorRepository.findAll();
+    public List<DoctorDto> getAllDoctor() {
+        List<Doctor> doctors = doctorRepository.findAll();
+        return doctors.stream().map(DoctorMapper::doctortoDoctorDto).toList();
     }
 
     @Override
-    public Doctor getDoctoryById(int id) {
-        return doctorRepository.findById(id).get();
+    public DoctorDto getDoctoryById(int id) {
+        return DoctorMapper.doctortoDoctorDto(doctorRepository.findById(id).get());
     }
 
     @Override
-    public Doctor getDoctorBySpecialization(String specialization) {
-
-        return doctorRepository.findBySpecialization(specialization);
+    public List<DoctorDto> getDoctorBySpecialization(String specialization) {
+        List<Doctor> doctors = doctorRepository.findAllBySpecialization(specialization);
+        return doctors.stream().map(DoctorMapper::doctortoDoctorDto).toList();
     }
 
     @Override
-    public Doctor getDoctorByIdAndSpecialization(int id, String specialization) {
-        return doctorRepository.findByIdAndSpecialization(id,specialization);
+    public DoctorDto getDoctorByIdAndSpecialization(int id, String specialization) {
+        return DoctorMapper.doctortoDoctorDto(doctorRepository.findByIdAndSpecialization(id, specialization));
     }
 
     @Override
