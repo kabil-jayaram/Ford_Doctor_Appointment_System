@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="" />
+    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/controller/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/mapper/PatientMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/AddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/IPatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/PatientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/controller/DoctorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/dto/AppointmentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/dto/DoctorDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Doctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/TimeSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/mapper/DoctorMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/DoctorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/DoctorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/IDoctorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DoctorAppointmentSystemApplication.executor": "Run",
     "Spring Boot.DoctorServiceApplication.executor": "Run",
-    "git-widget-placeholder": "kabilan",
+    "git-widget-placeholder": "branch-Harshini",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/kjayar18/Library/CloudStorage/OneDrive-azureford/Ford Project/DoctorService/src/main/java/com/example/service",
     "node.js.detected.package.eslint": "true",
