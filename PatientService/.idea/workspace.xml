@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="Patient Service">
-      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/mapper/DoctorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/mapper/DoctorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Dto/PatientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Dto/PatientDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Appointment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/PatientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/PatientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/repository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/PatientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/IPatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/IPatientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/PatientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/PatientServiceImpl.java" afterDir="false" />
     </list>
@@ -113,7 +111,7 @@
       <workItem from="1709808168240" duration="4391000" />
       <workItem from="1709813979319" duration="806000" />
       <workItem from="1709819063977" duration="598000" />
-      <workItem from="1709877235307" duration="2648000" />
+      <workItem from="1709877235307" duration="3479000" />
     </task>
     <task id="LOCAL-00001" summary="Patient Service">
       <option name="closed" value="true" />
@@ -131,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709873671218</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Patient Service">
+      <option name="closed" value="true" />
+      <created>1709880820971</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709880820972</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

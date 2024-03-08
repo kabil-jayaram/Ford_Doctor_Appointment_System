@@ -43,7 +43,7 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
-    public Patient getPatientByCity(String city) {
+    public List<Patient> getPatientByCity(String city) {
         return patientRepository.findByAddressCity(city);
     }
 
@@ -53,14 +53,10 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
-    public Patient getPatientByAge(int age) {
+    public List<Patient> getPatientByAge(int age) {
         return patientRepository.findByAge(age);
     }
 
-    @Override
-    public Patient getPatientByDiagnosis(String diagnosis) {
-        return patientRepository.findByDiagnosis(diagnosis);
-    }
 
     @Override
     public Boolean deletePatient(int id) {

@@ -35,7 +35,7 @@ public class PatientController {
     }
 
     @GetMapping("/patient/city/{city}")
-    public Patient getPatientByCity(@PathVariable("city") String city) {
+    public List<Patient> getPatientByCity(@PathVariable("city") String city) {
         return patientService.getPatientByCity(city);
     }
 
@@ -44,13 +44,8 @@ public class PatientController {
         return patientService.getPatientByIdAndName(id, name);
     }
 
-    @GetMapping("/patient/diagnosis/{diagnosis}")
-    public Patient getPatientByDiagnosis(@PathVariable("diagnosis") String diagnosis) {
-        return patientService.getPatientByDiagnosis(diagnosis);
-    }
-
     @GetMapping("/patient/age/{age}")
-    public Patient getPatientByAge(@PathVariable("age") int age) {
+    public List<Patient> getPatientByAge(@PathVariable("age") int age) {
         return patientService.getPatientByAge(age);
     }
 
