@@ -1,6 +1,8 @@
 package com.example.controller;
 
+import com.example.dto.DoctorDto;
 import com.example.entity.Patient;
+import com.example.service.DoctorDtoService;
 import com.example.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +16,8 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
+    @Autowired
+    private DoctorDtoService doctorDtoService;
     @PostMapping("/patients")
     public Patient addPatient(@RequestBody Patient patient)
     {
@@ -56,6 +60,30 @@ public class PatientController {
     {
         patientService.deletePatient(id);
         return "Patient Details deleted Successfully";
+    }
+
+
+    // controller for doctor dto
+
+
+    @GetMapping("/doctors")
+    public List<DoctorDto> getDoctors() {
+        return doctorDtoService.getDoctors();
+    }
+    @GetMapping("/doctor/{id}")
+    public DoctorDto getDoctorById(@PathVariable("id") int doctorId)
+    {
+        return doctorDtoService.getDoctorById(doctorId);
+    }
+
+    @GetMapping("/doctor/specialization")
+    public List<DoctorDto> getDoctorBySpecialization(@RequestParam String specialization) {
+        return doctorDtoService.getDoctorsBySpecialization(specialization);
+    }
+
+    @GetMapping("/doctor")
+    public DoctorDto getDoctorByIdAndSpecialization(@RequestParam int id, @RequestParam String specialization) {
+        return doctorDtoService.getDoctorByIdAndSpecialization(id, specialization);
     }
 
 }
