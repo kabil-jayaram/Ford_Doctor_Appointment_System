@@ -12,19 +12,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,8 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DoctorAppointmentSystemApplication.executor": "Debug",
     "Spring Boot.DoctorServiceApplication.executor": "Run",
-    "Spring Boot.PatientServiceApplication.executor": "Run",
-    "git-widget-placeholder": "branch-Harshini",
+    "git-widget-placeholder": "kabilan",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/kjayar18/Library/CloudStorage/OneDrive-azureford/Ford Project/PatientService",
     "node.js.detected.package.eslint": "true",
