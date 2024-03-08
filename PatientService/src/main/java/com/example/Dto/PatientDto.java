@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PatientDto {
     private int id;
-    private int name;
-    private int Age;
-    private String diagnosis;
+    private String name;
+    private int age;
+  
 }
