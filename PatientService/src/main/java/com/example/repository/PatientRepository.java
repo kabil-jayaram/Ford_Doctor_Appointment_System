@@ -13,6 +13,4 @@ public interface PatientRepository extends JpaRepository<Patient,Integer> {
 
     Patient findByAge(int age);
 
-    Patient findByDiagnosis(String diagnosis);
-
 }
