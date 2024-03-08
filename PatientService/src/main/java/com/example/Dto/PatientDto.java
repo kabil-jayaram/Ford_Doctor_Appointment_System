@@ -1,4 +1,4 @@
-package com.example.Dto;
+package com.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PatientDto {
     private int id;
-    private int name;
+    private String name;
     private int Age;
     private String diagnosis;
 }
