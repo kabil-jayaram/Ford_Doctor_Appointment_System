@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/controller/PatientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Patient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/AddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/PatientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/IPatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/IPatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/PatientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/PatientServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
