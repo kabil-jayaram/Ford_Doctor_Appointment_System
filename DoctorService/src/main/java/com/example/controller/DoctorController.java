@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.dto.DoctorDto;
 import com.example.entity.Doctor;
 import com.example.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,22 +26,22 @@ public class DoctorController {
     }
 
     @GetMapping("/doctors")
-    public List<Doctor> getDoctors() {
+    public List<DoctorDto> getDoctors() {
         return doctorService.getAllDoctor();
     }
 
     @GetMapping("/doctor/{id}")
-    public Doctor getDoctorById(@PathVariable("id") int id) {
+    public DoctorDto getDoctorById(@PathVariable("id") int id) {
         return doctorService.getDoctoryById(id);
     }
 
     @GetMapping("/doctor/specialization")
-    public Doctor getDoctorBySpecialization(@RequestParam String specialization) {
+    public List<DoctorDto> getDoctorBySpecialization(@RequestParam String specialization) {
         return doctorService.getDoctorBySpecialization(specialization);
     }
 
     @GetMapping("/doctor")
-    public Doctor getDoctorByIdAndSpecialization(@RequestParam int id, @RequestParam String specialization) {
+    public DoctorDto getDoctorByIdAndSpecialization(@RequestParam int id, @RequestParam String specialization) {
         return doctorService.getDoctorByIdAndSpecialization(id, specialization);
     }
 
