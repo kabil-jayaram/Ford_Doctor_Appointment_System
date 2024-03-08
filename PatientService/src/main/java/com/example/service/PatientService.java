@@ -1,6 +1,5 @@
 package com.example.service;
 
-import com.example.entity.Address;
 import com.example.entity.Patient;
 import com.example.repository.AddressRepository;
 import com.example.repository.PatientRepository;
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PatientServiceImpl implements IPatientService{
+public class PatientService implements IPatientService{
     @Autowired
     private PatientRepository patientRepository;
     @Autowired
@@ -29,8 +28,6 @@ public class PatientServiceImpl implements IPatientService{
         existingPatient.setName(patient.getName());
         existingPatient.setAddress(patient.getAddress());
         existingPatient.setAge(patient.getAge());
-        existingPatient.setDescription(patient.getDescription());
-        existingPatient.setDiagnosis(patient.getDiagnosis());
         return patientRepository.save(existingPatient);
     }
 
@@ -57,11 +54,6 @@ public class PatientServiceImpl implements IPatientService{
     @Override
     public Patient getPatientByAge(int age) {
         return patientRepository.findByAge(age);
-    }
-
-    @Override
-    public Patient getPatientByDiagnosis(String diagnosis) {
-        return patientRepository.findByDiagnosis(diagnosis);
     }
 
     @Override

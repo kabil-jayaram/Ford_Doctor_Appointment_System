@@ -14,7 +14,6 @@ public interface IPatientService {
     public Patient getPatientByCity(String city);
     public Patient getDoctorByIdAndName(int id,String name);
     public Patient getPatientByAge(int age);
-    public Patient getPatientByDiagnosis(String diagnosis);
 
 
  //   public AppointmentDto requestAppointment(int doctorId,TimeSlotDto timeSlot);

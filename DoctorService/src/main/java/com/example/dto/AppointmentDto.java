@@ -15,5 +15,7 @@ public class AppointmentDto {
     private int doctorId;
     private int timeSlot;
     private LocalDate localDate;
+    private String description;
+    private String  diagnosis;
     private String status;
 }

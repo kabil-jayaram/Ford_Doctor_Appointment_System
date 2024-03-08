@@ -18,8 +18,6 @@ public class Patient {
 
     private String name;
     private int age;
-    private String description;
-    private String  diagnosis;
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Address address;
 
