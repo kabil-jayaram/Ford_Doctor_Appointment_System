@@ -17,7 +17,7 @@ public interface IPatientService {
     public Patient getPatientByDiagnosis(String diagnosis);
 
 
- //   public Appointment requestAppointment(int doctorId,TimeSlotDto timeSlot);
+ //   public AppointmentDto requestAppointment(int doctorId,TimeSlotDto timeSlot);
  //   public boolean cancelAppointment(int appointmentId);
 
     
