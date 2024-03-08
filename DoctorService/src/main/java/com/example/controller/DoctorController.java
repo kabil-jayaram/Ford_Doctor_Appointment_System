@@ -35,13 +35,13 @@ public class DoctorController {
     }
 
     @GetMapping("/doctor/specialization")
-    public Doctor getDoctorBySpecialization(@RequestBody Doctor doctor) {
-        return doctorService.getDoctorBySpecialization(doctor.getSpecialization());
+    public Doctor getDoctorBySpecialization(@RequestParam String specialization) {
+        return doctorService.getDoctorBySpecialization(specialization);
     }
 
     @GetMapping("/doctor")
-    public Doctor getDoctorByIdAndSpecialization(@RequestBody Doctor doctor) {
-        return doctorService.getDoctorByIdAndSpecialization(doctor.getId(), doctor.getSpecialization());
+    public Doctor getDoctorByIdAndSpecialization(@RequestParam int id, @RequestParam String specialization) {
+        return doctorService.getDoctorByIdAndSpecialization(id, specialization);
     }
 
     @DeleteMapping("/doctor/{id}")
