@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.entity.Address;
 import com.example.entity.Patient;
 import com.example.repository.AddressRepository;
 import com.example.repository.PatientRepository;
@@ -44,8 +45,8 @@ public class PatientServiceImpl implements IPatientService{
     }
 
     @Override
-    public Patient getPatientByCity(String city) {
-        return addressRepository.findByCity(city);
+    public  Patient getPatientByCity(String city) {
+        return patientRepository.findByAddressCity(city);
     }
 
     @Override
