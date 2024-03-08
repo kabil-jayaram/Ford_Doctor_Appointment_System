@@ -12,6 +12,7 @@ public class AppointmentService implements IAppointmentService{
 
     @Autowired
     private AppointmentRepository appointmentRepository;
+
     @Override
     public Appointment addAppointment(Appointment appointment) {
         return appointmentRepository.save(appointment);
@@ -23,13 +24,28 @@ public class AppointmentService implements IAppointmentService{
     }
 
     @Override
-    public Appointment getAppointmentByPatientId(int patientId) {
+    public List<Appointment> getAppointmentByPatientId(int patientId) {
         return appointmentRepository.findAllByPatientId(patientId);
+    }
+
+    @Override
+    public List<Appointment> getAppointmentByPatientIdAndStatus(int patientId, String status) {
+        return appointmentRepository.findAllByPatientIdAndStatus(patientId, status);
     }
 
     @Override
     public List<Appointment> getAppointmentByDoctorId(int doctorId) {
         return appointmentRepository.findAllByDoctorId(doctorId);
+    }
+
+    @Override
+    public List<Appointment> getAppointmentByDoctorIdAndStatus(int doctorId, String status) {
+        return appointmentRepository.findAllByDoctorIdAndStatus(doctorId, status);
+    }
+
+    @Override
+    public List<Appointment> getAppointmentByStatus(String status) {
+        return appointmentRepository.findAllByStatus(status);
     }
 
     @Override
@@ -41,10 +57,5 @@ public class AppointmentService implements IAppointmentService{
     public Boolean deleteAppointment(int id) {
         appointmentRepository.deleteById(id);
         return true;
-    }
-
-    @Override
-    public List<Appointment> getAppointmentByStatus(String status) {
-        return appointmentRepository.findAllByStatus(status);
     }
 }

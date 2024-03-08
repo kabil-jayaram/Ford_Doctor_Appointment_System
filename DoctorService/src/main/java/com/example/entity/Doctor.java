@@ -1,13 +1,14 @@
 package com.example.entity;
 
 import javax.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.Map;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,8 +20,8 @@ public class Doctor {
     private int id;
     private String name;
     private String specialization;
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Appointment> appointmentsList;
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Map<Integer,Boolean> timeSlot;
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<TimeSlot> timeSlot;
 }
