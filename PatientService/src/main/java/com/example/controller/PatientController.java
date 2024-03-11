@@ -40,7 +40,7 @@ public class PatientController {
         return patientService.getPatientById(id);
     }
     @GetMapping("/patient/city")
-    public Patient getPatientByCity(@RequestParam String city) {
+    public List<Patient> getPatientByCity(@RequestParam String city) {
         return patientService.getPatientByCity(city);
     }
 
@@ -51,7 +51,7 @@ public class PatientController {
     }
 
     @GetMapping("/patient/age")
-    public Patient getPatientByAge(@RequestParam int age)
+    public List<Patient> getPatientByAge(@RequestParam int age)
     {
         return patientService.getPatientByAge(age);
     }

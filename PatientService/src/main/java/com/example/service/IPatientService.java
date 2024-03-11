@@ -11,9 +11,9 @@ public interface IPatientService {
     public Patient updatePatient(Patient patient);
     public List<Patient> getAllPatient();
     public Patient getPatientById(int id);
-    public Patient getPatientByCity(String city);
+    public List<Patient> getPatientByCity(String city);
     public Patient getDoctorByIdAndName(int id,String name);
-    public Patient getPatientByAge(int age);
+    public List<Patient> getPatientByAge(int age);
 
 
  //   public AppointmentDto requestAppointment(int doctorId,TimeSlotDto timeSlot);
