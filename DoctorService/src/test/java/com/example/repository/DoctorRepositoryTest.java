@@ -1,7 +1,6 @@
-package com.example;
+package com.example.repository;
 
 import com.example.entity.Doctor;
-import com.example.repository.DoctorRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +12,7 @@ import static org.mockito.Mockito.*;
 
 
 @SpringBootTest
-class DoctorAppointmentSystemRepositoryTests {
+class DoctorRepositoryTest {
 	@Mock
 	DoctorRepository doctorRepository;
 
