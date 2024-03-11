@@ -18,6 +18,7 @@ public class Appointment {
     private int patientId;
     private int doctorId;
     private int timeSlot;
-    private LocalDate localDate;
+    private String description;
+    private String  diagnosis;
     private String status;
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PatientServiceImpl implements IPatientService {
+public class PatientService implements IPatientService{
     @Autowired
     private PatientRepository patientRepository;
     @Autowired
@@ -28,7 +28,6 @@ public class PatientServiceImpl implements IPatientService {
         existingPatient.setName(patient.getName());
         existingPatient.setAddress(patient.getAddress());
         existingPatient.setAge(patient.getAge());
-
         return patientRepository.save(existingPatient);
     }
 
@@ -43,20 +42,19 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
-    public List<Patient> getPatientByCity(String city) {
+    public  Patient getPatientByCity(String city) {
         return patientRepository.findByAddressCity(city);
     }
 
     @Override
-    public Patient getPatientByIdAndName(int id, String name) {
-        return patientRepository.findByIdAndName(id, name);
+    public Patient getDoctorByIdAndName(int id, String name) {
+        return patientRepository.findByIdAndName(id,name);
     }
 
     @Override
-    public List<Patient> getPatientByAge(int age) {
+    public Patient getPatientByAge(int age) {
         return patientRepository.findByAge(age);
     }
-
 
     @Override
     public Boolean deletePatient(int id) {
