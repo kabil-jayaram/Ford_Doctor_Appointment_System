@@ -15,6 +15,4 @@ public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
     List<Patient> findByAge(int age);
 
-    Patient findByDiagnosis(String diagnosis);
-
 }

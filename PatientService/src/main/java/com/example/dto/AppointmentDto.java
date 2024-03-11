@@ -16,6 +16,6 @@ public class AppointmentDto {
     private int timeSlot;
     private LocalDate localDate;
     private String description;
-    private String  diagnosis;
+    private String diagnosis;
     private String status;
 }
