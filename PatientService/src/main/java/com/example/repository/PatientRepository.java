@@ -15,4 +15,7 @@ public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
     List<Patient> findByAge(int age);
 
+    List<Patient> findAllByAddressCity(String city);
+
+    List<Patient> findAllByAge(int age);
 }

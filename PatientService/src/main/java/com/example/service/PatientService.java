@@ -42,8 +42,8 @@ public class PatientService implements IPatientService{
     }
 
     @Override
-    public  Patient getPatientByCity(String city) {
-        return patientRepository.findByAddressCity(city);
+    public  List<Patient> getPatientByCity(String city) {
+        return patientRepository.findAllByAddressCity(city);
     }
 
     @Override
@@ -52,8 +52,8 @@ public class PatientService implements IPatientService{
     }
 
     @Override
-    public Patient getPatientByAge(int age) {
-        return patientRepository.findByAge(age);
+    public List<Patient> getPatientByAge(int age) {
+        return patientRepository.findAllByAge(age);
     }
 
     @Override

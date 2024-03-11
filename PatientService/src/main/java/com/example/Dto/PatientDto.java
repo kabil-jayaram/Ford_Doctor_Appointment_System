@@ -11,6 +11,5 @@ public class PatientDto {
     private int id;
     private String name;
     private int age;
-    private int Age;
     private String diagnosis;
 }
