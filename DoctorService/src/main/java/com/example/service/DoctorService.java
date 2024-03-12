@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DoctorService implements IDoctorService {
@@ -34,10 +35,13 @@ public class DoctorService implements IDoctorService {
 
         List<TimeSlot> updatedTimeSlots = existingDoctor.getTimeSlot();
         for (TimeSlot timeSlot : updatedTimeSlots) {
-            TimeSlot existingTimeSlot = timeSlotRepository.findById(timeSlot.getId()).get();
-            existingTimeSlot.setStartTime(timeSlot.getStartTime());
-            existingTimeSlot.setEndTime(timeSlot.getEndTime());
-            existingTimeSlot.setAvailable(timeSlot.isAvailable());
+            Optional<TimeSlot> optionalExistingTimeSlot = timeSlotRepository.findById(timeSlot.getId());
+            if(optionalExistingTimeSlot.isPresent()) {
+                TimeSlot existingTimeSlot = optionalExistingTimeSlot.get();
+                existingTimeSlot.setStartTime(timeSlot.getStartTime());
+                existingTimeSlot.setEndTime(timeSlot.getEndTime());
+                existingTimeSlot.setAvailable(timeSlot.isAvailable());
+            }
         }
 
         return doctorRepository.save(existingDoctor);

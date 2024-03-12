@@ -50,7 +50,14 @@ public class AppointmentService implements IAppointmentService{
 
     @Override
     public Appointment updateAppointment(Appointment appointment) {
-        return appointmentRepository.save(appointment);
+        Appointment existingAppointment = appointmentRepository.findById(appointment.getId()).get();
+        existingAppointment.setDoctorId(appointment.getDoctorId());
+        existingAppointment.setPatientId(appointment.getPatientId());
+        existingAppointment.setTimeSlot(appointment.getTimeSlot());
+        existingAppointment.setStatus(appointment.getStatus());
+        existingAppointment.setDiagnosis(appointment.getDiagnosis());
+        existingAppointment.setDescription(appointment.getDescription());
+        return appointmentRepository.save(existingAppointment);
     }
 
     @Override
