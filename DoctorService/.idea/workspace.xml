@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="DoctorService Update">
-      <change afterPath="$PROJECT_DIR$/../PatientService/src/test/java/com/example/PatientSystemApplicationRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/Dto/PatientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/Dto/PatientDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/entity/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/mapper/PatientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/mapper/PatientMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/repository/PatientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/IPatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/IPatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/java/com/example/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/src/test/java/com/example/DoctorAppointmentSystemApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +49,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DoctorAppointmentSystemApplication.executor": "Run",
     "Spring Boot.DoctorServiceApplication.executor": "Run",
-    "git-widget-placeholder": "branch-Harshini",
+    "git-widget-placeholder": "Tamil",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kjayar18/Library/CloudStorage/OneDrive-azureford/Ford Project/DoctorService/src/main/java/com/example/service",
+    "last_opened_file_path": "/Users/tm10/IdeaProjects/Ford Pojects/Ford_Doctor_Appointment_System/DoctorService",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "http.proxy",
     "vue.rearranger.settings.migration": "true"
   }
@@ -100,6 +93,13 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-temurin-17.0.10-f644763e9732-2dd12e70" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -113,6 +113,8 @@
       <workItem from="1709825368152" duration="598000" />
       <workItem from="1709872558736" duration="39000" />
       <workItem from="1709872601947" duration="4848000" />
+      <workItem from="1710309990155" duration="23000" />
+      <workItem from="1710310101981" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="DoctorService Update">
       <option name="closed" value="true" />
