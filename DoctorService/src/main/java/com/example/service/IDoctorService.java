@@ -14,7 +14,7 @@ public interface IDoctorService {
 
     public List<DoctorDto> getAllDoctor();
 
-    public DoctorDto getDoctorById(int id);
+    public DoctorDto getDoctoryById(int id);
 
     public List<DoctorDto> getDoctorBySpecialization(String specialization);
 

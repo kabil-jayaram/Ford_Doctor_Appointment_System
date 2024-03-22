@@ -93,7 +93,7 @@ class DoctorServiceTest {
         // When
         when(doctorRepository.findById(id)).thenReturn(Optional.of(doctor));
         // Then
-        DoctorDto retrievedDoctor = doctorService.getDoctorById(id);
+        DoctorDto retrievedDoctor = doctorService.getDoctoryById(id);
         assertThat(retrievedDoctor).isNotNull();
         System.out.println(retrievedDoctor);
     }

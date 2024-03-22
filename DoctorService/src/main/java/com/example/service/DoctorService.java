@@ -54,7 +54,7 @@ public class DoctorService implements IDoctorService {
     }
 
     @Override
-    public DoctorDto getDoctorById(int id) {
+    public DoctorDto getDoctoryById(int id) {
         return DoctorMapper.doctortoDoctorDto(doctorRepository.findById(id).get());
     }
 

@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="DoctorService Update">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/controller/AppointmentControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/controller/DoctorControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/DoctorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/DoctorServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/AppointmentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/AppointmentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/DoctorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/DoctorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/DoctorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/IDoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/IDoctorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/service/DoctorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/service/DoctorServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="DoctorService Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +14,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -52,25 +38,6 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;JUnit.AppointmentControllerTest.deleteAppointment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppointmentControllerTest.getAppointmentByDoctorId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppointmentControllerTest.getAppointmentByDoctorIdAndStatus.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppointmentControllerTest.getAppointmentById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppointmentControllerTest.getAppointmentByPatientId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppointmentControllerTest.getAppointmentByPatientIdAndStatus.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppointmentControllerTest.getAppointmentByStatus.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.addDoctors.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.deleteDoctor.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.getDoctorById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.getDoctorByIdAndSpecialization.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.getDoctorBySpecialization.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.getDoctors.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorControllerTest.updateDoctors.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorRepositoryTest.addDoctor.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorRepositoryTest.deleteDoctor.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DoctorRepositoryTest.updateDoctor.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -79,8 +46,6 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.DoctorAppointmentSystemApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.DoctorServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;kabilan&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/kjayar18/Library/CloudStorage/OneDrive-azureford/Ford Project/DoctorService/src/main/java/com/example/service&quot;,
@@ -96,12 +61,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/service" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.example.controller" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.controller" />
       <recent name="com.example.mapper" />
@@ -110,87 +69,7 @@
       <recent name="com.example.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppointmentControllerTest.deleteAppointment">
-    <configuration name="AppointmentControllerTest.deleteAppointment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoctorAppointmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.controller.AppointmentControllerTest" />
-      <option name="METHOD_NAME" value="deleteAppointment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppointmentControllerTest.getAppointmentByDoctorIdAndStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoctorAppointmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.controller.AppointmentControllerTest" />
-      <option name="METHOD_NAME" value="getAppointmentByDoctorIdAndStatus" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppointmentControllerTest.getAppointmentByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoctorAppointmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.controller.AppointmentControllerTest" />
-      <option name="METHOD_NAME" value="getAppointmentByPatientId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppointmentControllerTest.getAppointmentByPatientIdAndStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoctorAppointmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.controller.AppointmentControllerTest" />
-      <option name="METHOD_NAME" value="getAppointmentByPatientIdAndStatus" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppointmentControllerTest.getAppointmentByStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoctorAppointmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.controller.AppointmentControllerTest" />
-      <option name="METHOD_NAME" value="getAppointmentByStatus" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.DoctorServiceApplication">
     <configuration name="DoctorAppointmentSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="DoctorAppointmentSystem" />
@@ -207,24 +86,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.AppointmentControllerTest.deleteAppointment" />
-      <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByDoctorIdAndStatus" />
-      <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByPatientId" />
-      <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByPatientIdAndStatus" />
-      <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByStatus" />
-      <item itemvalue="Spring Boot.DoctorAppointmentSystemApplication" />
-      <item itemvalue="Spring Boot.DoctorServiceApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.AppointmentControllerTest.deleteAppointment" />
-        <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByStatus" />
-        <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByPatientIdAndStatus" />
-        <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByPatientId" />
-        <item itemvalue="JUnit.AppointmentControllerTest.getAppointmentByDoctorIdAndStatus" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -246,12 +107,6 @@
       <workItem from="1709825368152" duration="598000" />
       <workItem from="1709872558736" duration="39000" />
       <workItem from="1709872601947" duration="4848000" />
-      <workItem from="1710496580661" duration="8000" />
-      <workItem from="1710496597889" duration="19000" />
-      <workItem from="1710496622673" duration="83000" />
-      <workItem from="1711002273253" duration="6321000" />
-      <workItem from="1711096098308" duration="9337000" />
-      <workItem from="1711106515056" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="DoctorService Update">
       <option name="closed" value="true" />
