@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="DoctorService Update">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/controller/DoctorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,23 +75,7 @@
       <recent name="com.example.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DoctorControllerTest.updateDoctors">
-    <configuration name="DoctorControllerTest.updateDoctors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DoctorAppointmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.controller.DoctorControllerTest" />
-      <option name="METHOD_NAME" value="updateDoctors" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.DoctorServiceApplication">
     <configuration name="DoctorAppointmentSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="DoctorAppointmentSystem" />
@@ -108,11 +92,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.DoctorControllerTest.updateDoctors" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -136,6 +115,7 @@
       <workItem from="1709872601947" duration="4848000" />
       <workItem from="1710309990155" duration="23000" />
       <workItem from="1710310101981" duration="12000" />
+      <workItem from="1711109717410" duration="142000" />
     </task>
     <task id="LOCAL-00001" summary="DoctorService Update">
       <option name="closed" value="true" />
