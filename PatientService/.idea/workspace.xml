@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="Patient Service">
-      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/mapper/AppointmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/mapper/AppointmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/PatientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/PatientDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DoctorService/src/test/java/com/example/controller/AppointmentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DoctorService/src/test/java/com/example/controller/DoctorControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/DoctorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/DoctorServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/dto/AppointmentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/dto/AppointmentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/dto/DoctorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/dto/DoctorDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/service/IDoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/java/com/example/service/IDoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoctorService/src/test/java/com/example/service/DoctorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/src/test/java/com/example/service/DoctorServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +118,15 @@
       <workItem from="1709808168240" duration="4391000" />
       <workItem from="1709813979319" duration="806000" />
       <workItem from="1709819063977" duration="598000" />
+      <workItem from="1710496582675" duration="6000" />
+      <workItem from="1710496598860" duration="10000" />
+      <workItem from="1711002284323" duration="1343000" />
+      <workItem from="1711096106140" duration="2404000" />
+      <workItem from="1711106426290" duration="2000" />
+      <workItem from="1711106436157" duration="5000" />
+      <workItem from="1711106466616" duration="4000" />
+      <workItem from="1711106475969" duration="26000" />
+      <workItem from="1711106518004" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="Patient Service">
       <option name="closed" value="true" />
