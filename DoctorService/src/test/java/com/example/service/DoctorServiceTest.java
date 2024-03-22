@@ -4,23 +4,19 @@ import com.example.dto.DoctorDto;
 import com.example.entity.Doctor;
 import com.example.entity.TimeSlot;
 import com.example.repository.DoctorRepository;
-import com.example.repository.TimeSlotRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
@@ -28,9 +24,6 @@ import static org.mockito.Mockito.*;
 class DoctorServiceTest {
     @Mock
     DoctorRepository doctorRepository;
-
-    @Mock
-    TimeSlotRepository timeSlotRepository;
 
     @InjectMocks
     DoctorService doctorService;
@@ -93,7 +86,7 @@ class DoctorServiceTest {
         // When
         when(doctorRepository.findById(id)).thenReturn(Optional.of(doctor));
         // Then
-        DoctorDto retrievedDoctor = doctorService.getDoctoryById(id);
+        DoctorDto retrievedDoctor = doctorService.getDoctorById(id);
         assertThat(retrievedDoctor).isNotNull();
         System.out.println(retrievedDoctor);
     }
@@ -103,13 +96,15 @@ class DoctorServiceTest {
         // Given
         String specialization = "Cardiology";
         Doctor doctor = Doctor.builder().id(2).name("Harshini").specialization("Cardiology").build();
+        List<Doctor> doctors = new ArrayList<>();
+        doctors.add(doctor);
         doctorService.addDoctor(doctor);
         // When
-        when(doctorRepository.findAllBySpecialization(specialization)).thenReturn(Arrays.asList(doctor));
+        when(doctorRepository.findAllBySpecialization(specialization)).thenReturn(doctors);
         // Then
-        List<DoctorDto> doctors = doctorService.getDoctorBySpecialization(specialization);
-        assertThat(doctors).isNotNull();
-        System.out.println(doctors);
+        List<DoctorDto> retrievedDoctors = doctorService.getDoctorBySpecialization(specialization);
+        assertThat(retrievedDoctors).isNotNull();
+        System.out.println(retrievedDoctors);
     }
 
     @Test
