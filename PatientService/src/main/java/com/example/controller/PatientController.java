@@ -47,7 +47,7 @@ public class PatientController {
     @GetMapping("/patient/idandname")
     public Patient getIdAndName(@RequestParam int id,@RequestParam String name)
     {
-        return patientService.getDoctorByIdAndName(id,name);
+        return patientService.getPatientByIdAndName(id,name);
     }
 
     @GetMapping("/patient/age")

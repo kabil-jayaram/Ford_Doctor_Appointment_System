@@ -47,7 +47,7 @@ public class PatientService implements IPatientService{
     }
 
     @Override
-    public Patient getDoctorByIdAndName(int id, String name) {
+    public Patient getPatientByIdAndName(int id, String name) {
         return patientRepository.findByIdAndName(id,name);
     }
 
