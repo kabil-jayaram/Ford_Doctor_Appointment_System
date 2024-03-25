@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.DoctorNotFoundException;
 import com.example.dto.DoctorDto;
 import com.example.entity.Doctor;
 import com.example.entity.TimeSlot;
@@ -28,34 +29,45 @@ public class DoctorService implements IDoctorService {
 
     @Override
     public Doctor updateDoctor(Doctor doctor) {
-        Doctor existingDoctor = doctorRepository.findById(doctor.getId()).get();
+        Optional<Doctor> optionalDoctor = doctorRepository.findById(doctor.getId());
 
-        existingDoctor.setName(doctor.getName());
-        existingDoctor.setSpecialization(doctor.getSpecialization());
+        if(optionalDoctor.isPresent()) {
+            Doctor existingDoctor = optionalDoctor.get();
+            existingDoctor.setName(doctor.getName());
+            existingDoctor.setSpecialization(doctor.getSpecialization());
 
-        List<TimeSlot> updatedTimeSlots = existingDoctor.getTimeSlot();
-        for (TimeSlot timeSlot : updatedTimeSlots) {
-            Optional<TimeSlot> optionalExistingTimeSlot = timeSlotRepository.findById(timeSlot.getId());
-            if(optionalExistingTimeSlot.isPresent()) {
-                TimeSlot existingTimeSlot = optionalExistingTimeSlot.get();
-                existingTimeSlot.setStartTime(timeSlot.getStartTime());
-                existingTimeSlot.setEndTime(timeSlot.getEndTime());
-                existingTimeSlot.setAvailable(timeSlot.isAvailable());
+            List<TimeSlot> updatedTimeSlots = existingDoctor.getTimeSlot();
+            for (TimeSlot timeSlot : updatedTimeSlots) {
+                Optional<TimeSlot> optionalExistingTimeSlot = timeSlotRepository.findById(timeSlot.getId());
+                if (optionalExistingTimeSlot.isPresent()) {
+                    TimeSlot existingTimeSlot = optionalExistingTimeSlot.get();
+                    existingTimeSlot.setStartTime(timeSlot.getStartTime());
+                    existingTimeSlot.setEndTime(timeSlot.getEndTime());
+                    existingTimeSlot.setAvailable(timeSlot.isAvailable());
+                }
             }
-        }
-
-        return doctorRepository.save(existingDoctor);
+            return doctorRepository.save(existingDoctor);
+        } else
+            throw new DoctorNotFoundException("Doctor with id " + doctor.getId() + " not found!!!");
     }
 
     @Override
     public List<DoctorDto> getAllDoctor() {
-        List<Doctor> doctors = doctorRepository.findAll();
-        return doctors.stream().map(DoctorMapper::doctortoDoctorDto).toList();
+        try {
+            List<Doctor> doctors = doctorRepository.findAll();
+            return doctors.stream().map(DoctorMapper::doctortoDoctorDto).toList();
+        } catch (Exception ex) {
+            throw new DoctorNotFoundException("Doctors Not Found!!!");
+        }
     }
 
     @Override
     public DoctorDto getDoctorById(int id) {
-        return DoctorMapper.doctortoDoctorDto(doctorRepository.findById(id).get());
+        Optional<Doctor> optionalDoctor = doctorRepository.findById(id);
+        if(optionalDoctor.isPresent())
+            return DoctorMapper.doctortoDoctorDto(optionalDoctor.get());
+        else
+            throw new DoctorNotFoundException("Doctor with id " + id + " not found!!!");
     }
 
     @Override
