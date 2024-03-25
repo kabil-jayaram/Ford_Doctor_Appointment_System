@@ -1,0 +1,40 @@
+<div class=" container-fluid text-center " style="margin: 10px;">
+  <div class="register">
+  <h1>Registration Form</h1>
+  <form #register="ngForm" (ngSubmit)="registerUser(register)">
+    <div>
+       <label for="name">Name:</label>
+       <input type="text" name="name" id="name" placeholder="Name" ngModel #name="ngModel"/>
+    </div>
+    <div>
+       <label for="age">Age:</label>
+       <input type="number" name="age" id="age" placeholder="Age" ngModel #age="ngModel"/>
+    </div>
+    <div>
+       <label for="address">Address</label>
+       <div>
+         <span>Door No: </span>
+         <input type="number" id="dno" name="dno" placeholder="Door No" ngModel #dno="ngModel">
+       </div>
+       <div>
+         <span>Street: </span>
+         <input type="number" id="street" name="street" placeholder="Street" ngModel #street="ngModel">
+       </div>
+    </div>
+    <div>
+       <span>City: </span>
+       <input type="number" id="city" name="city" placeholder="City" ngModel #city="ngModel">
+    </div>
+    <div>
+       <span>State: </span>
+       <input type="number" id="state" name="state" placeholder="State" ngModel #state="ngModel">
+    </div>
+    <div>
+       <span>Pin Code: </span>
+       <input type="number" id="pincode" name="pincode" placeholder="Pincode" ngModel #pincode="ngModel">
+    </div>
+    <input type="submit" name="submit" id="submit" value="Submit"> &nbsp;
+    <input type="reset" name="clear" id="clear" value="Clear">
+   </form>
+  </div>
+</div>
