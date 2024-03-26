@@ -16,14 +16,4 @@ export class AuthService {
   getLoginStatus() {
     return this.isLoggedIn;
   }
-  setLoginStatus() {
-    this.isLoggedIn = !this.isLoggedIn;
-    return this.isLoggedIn;
-  }
-
-  register(user:User) {
-   this.httpClient.post<User>(this.base_url + "/auth/addUser",user).subscribe((response) => {
-      console.log(response);
-   });
-  }
 }

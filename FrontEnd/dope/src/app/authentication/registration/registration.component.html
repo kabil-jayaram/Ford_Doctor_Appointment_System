@@ -1,19 +1,7 @@
 <div class="container-fluid" style="margin: 10px;">
   <div class="register">
-      <h1 class="text-center your">Registration Form</h1>
-      <form #register="ngForm" (ngSubmit)="registerUser(register)" class="row g-3">
-        <div class="col-md-6">
-          <label for="uname" class="form-label">Username:</label>
-          <input type="text" name="uname" id="uname" class="form-control" placeholder="Enter your username" ngModel #uname="ngModel"/>
-        </div>
-        <div class="col-md-6">
-          <label for="pwd" class="form-label">Password:</label>
-          <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Enter your password" ngModel #pwd="ngModel"/>
-        </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email:</label>
-          <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email" ngModel #email="ngModel"/>
-        </div>
+      <h1 class="text-center">Registration Form</h1>
+      <form #register="ngForm" class="row g-3">
         <div class="col-md-6">
           <label for="name" class="form-label">Name:</label>
           <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" ngModel #name="ngModel"/>
