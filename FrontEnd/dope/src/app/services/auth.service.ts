@@ -22,10 +22,6 @@ export class AuthService {
   }
 
   register(user:User) {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-   });
-
    this.httpClient.post<User>(this.base_url + "/auth/addUser",user).subscribe((response) => {
       console.log(response);
    });
