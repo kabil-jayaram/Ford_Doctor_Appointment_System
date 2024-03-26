@@ -28,11 +28,13 @@ public class UserController {
     @Autowired
     private JwtService jwtService;
 
+    @CrossOrigin
     @GetMapping("/welcome")
     public String welcome() {
         return "Welcome to Doctor Appointment System!!!";
     }
 
+    @CrossOrigin
     @PostMapping("/addUser")
     public String userRegistration(@RequestBody User user) {
         return userService.addUser(user);
