@@ -1,6 +1,7 @@
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,13 +21,13 @@ export class AuthService {
     return this.isLoggedIn;
   }
 
-  register(user:any) {
+  register(user:User) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
    });
 
-   this.httpClient.post(this.base_url + "/auth/addUser", JSON.stringify(user), { headers: headers }).subscribe((response) => {
-      console.log(JSON.stringify(response));
+   this.httpClient.post<User>(this.base_url + "/auth/addUser",user).subscribe((response) => {
+      console.log(response);
    });
   }
 }

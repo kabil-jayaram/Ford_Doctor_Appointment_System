@@ -6,6 +6,8 @@ import com.example.springsecurity.service.JwtService;
 import com.example.springsecurity.service.UserService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/auth")
 public class UserController {
@@ -28,16 +31,15 @@ public class UserController {
     @Autowired
     private JwtService jwtService;
 
-    @CrossOrigin
     @GetMapping("/welcome")
     public String welcome() {
         return "Welcome to Doctor Appointment System!!!";
     }
 
-    @CrossOrigin
     @PostMapping("/addUser")
-    public String userRegistration(@RequestBody User user) {
-        return userService.addUser(user);
+    public ResponseEntity<?> userRegistration(@RequestBody User user) {
+        User user1 = userService.addUser(user);
+        return new ResponseEntity<>(user1, HttpStatus.CREATED);
     }
 
     @PostMapping("/login")

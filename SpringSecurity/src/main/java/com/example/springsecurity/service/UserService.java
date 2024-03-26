@@ -28,10 +28,9 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("user not found " + username));
     }
 
-    public String addUser(User user) {
+    public User addUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository.save(user);
-        return "User added successfully";
+        return userRepository.save(user);
     }
 
     public List<User> getAllUser() {
