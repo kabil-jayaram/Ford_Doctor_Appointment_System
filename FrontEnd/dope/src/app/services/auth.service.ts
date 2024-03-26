@@ -12,4 +12,8 @@ export class AuthService {
   getLoginStatus() {
     return this.isLoggedIn;
   }
+  setLoginStatus() {
+    this.isLoggedIn = !this.isLoggedIn;
+    return this.isLoggedIn;
+  }
 }

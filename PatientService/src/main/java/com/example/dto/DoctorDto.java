@@ -11,7 +11,7 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DoctorDto {
+public class  DoctorDto {
     private int id;
     private String name;
     private String specialization;
