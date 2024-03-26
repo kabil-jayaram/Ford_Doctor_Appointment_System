@@ -1,0 +1,9 @@
+<div *ngIf="!isLoggedIn()">
+  <app-registration></app-registration>
+  <app-login></app-login>
+</div>
+<div *ngIf="isLoggedIn()">
+  <button (click)="changeview()" class="btn btn-success" style="float: right;margin: 10px;">Change View</button>
+  <app-doctor-page *ngIf="doctor === true"></app-doctor-page>
+  <app-patient-page *ngIf="doctor === false"></app-patient-page>
+</div>
