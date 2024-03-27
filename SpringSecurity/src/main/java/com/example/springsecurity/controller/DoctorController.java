@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.Objects;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class DoctorController {
