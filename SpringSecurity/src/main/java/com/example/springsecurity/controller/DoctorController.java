@@ -164,6 +164,13 @@ public class DoctorController {
 
 
     //below end points is to get appointment details
+    @PostMapping("/appointment")
+    @PreAuthorize("hasAnyAuthority('USER','ADMIN')")
+    public Object addAppointment(@RequestBody Object appointment) {
+        ResponseEntity<Object> responseEntity = restTemplate.postForEntity("http://localhost:8080/doctorservice/api/appointment", appointment, Object.class);
+        System.out.println(responseEntity.getBody());
+        return responseEntity.getBody();
+    }
 
     @GetMapping("/appointments/{id}")
     @PreAuthorize("hasAnyAuthority('USER','ADMIN')")

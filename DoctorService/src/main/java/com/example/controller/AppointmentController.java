@@ -20,6 +20,11 @@ public class AppointmentController {
         return appointmentService.getAppointmentById(id);
     }
 
+    @PostMapping("/appointment")
+    public Appointment addAppointment(@RequestBody Appointment appointment) {
+        return appointmentService.addAppointment(appointment);
+    }
+
     @GetMapping("/appointments/doctor/{doctorId}")
     public List<Appointment> getAppointmentByDoctorId(@PathVariable("doctorId") int doctorId) {
         return appointmentService.getAppointmentByDoctorId(doctorId);
