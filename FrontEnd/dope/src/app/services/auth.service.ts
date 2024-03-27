@@ -10,10 +10,10 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 })
 export class AuthService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  private isLoggedIn:boolean = false;
-  private base_url:string = "http://localhost:8081";
+  private isLoggedIn: boolean = false;
+  private base_url: string = "http://localhost:8081";
 
   getLoginStatus() {
     return this.isLoggedIn;
@@ -23,10 +23,10 @@ export class AuthService {
     return this.isLoggedIn;
   }
 
-  register(user:User) {
-   this.httpClient.post<User>(this.base_url + "/auth/addUser",user).subscribe((response) => {
+  register(user: User) {
+    this.httpClient.post<User>(this.base_url + "/auth/addUser", user).subscribe((response) => {
       console.log(response);
-   });
+    });
   }
 
   // login(user:LoginUser) {
@@ -35,50 +35,48 @@ export class AuthService {
   //   });
   //  }
 
-  token:any;
+  token: any;
   login(auth: LoginUser): void {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
-   
-    this.httpClient.post<string>(this.base_url + "/auth/login", auth, { headers: headers, responseType: 'text' as 'json' })
-       .pipe(
-         catchError((error: HttpErrorResponse) => {
-           console.error('Error:', error);
-           return throwError(error);
-         })
-       )
-       .subscribe(
-         token => {
-          this.token=token;
-          alert("user logged successfully!");
-           console.log('JWT authentitcation Token:', token);
-           this.saveTokenToBrowser();
-         },
-         error => {
-          alert("error login user : (");
-           console.error('Login Error:', error);
-         }
-       );
-   }
 
-  saveTokenToBrowser()
-  {
-    window.sessionStorage.setItem('token',this.token);
+    this.httpClient.post<string>(this.base_url + "/auth/login", auth, { headers: headers, responseType: 'text' as 'json' })
+      .pipe(
+        catchError((error: HttpErrorResponse) => {
+          console.error('Error:', error);
+          return throwError(error);
+        })
+      )
+      .subscribe(
+        token => {
+          this.token = token;
+          alert("user logged successfully!");
+          console.log('JWT authentitcation Token:', token);
+          this.saveTokenToBrowser();
+        },
+        error => {
+          alert("error login user : (");
+          console.error('Login Error:', error);
+        }
+      );
   }
-  
-  logout()
-  {
+
+  saveTokenToBrowser() {
+    window.sessionStorage.setItem('token', this.token);
+  }
+
+  logout() {
     window.sessionStorage.clear();
     alert("user logged out successfully!");
   }
-   
+
 }
 
-export class LoginUser{
-  private userName:string;
-  private password:string;
-  constructor(name:string,pwd:string)
-  {
-    this.userName=name;
-    this.password=pwd;
+export class LoginUser {
+  private userName: string;
+  private password: string;
+  constructor(name: string, pwd: string) {
+    this.userName = name;
+    this.password = pwd;
   }
 }
+

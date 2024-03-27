@@ -2,7 +2,9 @@ package com.example.springsecurity.controller;
 
 import com.example.springsecurity.entity.Auth;
 import com.example.springsecurity.entity.User;
+import com.example.springsecurity.entity.UserDetailsDto;
 import com.example.springsecurity.service.JwtService;
+import com.example.springsecurity.service.UserDetails;
 import com.example.springsecurity.service.UserService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,10 +45,14 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String userLogin(@RequestBody Auth auth) {
+    public ResponseEntity<?> userLogin(@RequestBody Auth auth) {
         Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(auth.getUserName(), auth.getPassword()));
+        UserDetails userDetails = this.userService.loadUserByUsername(auth.getUserName());
+        UserDetailsDto userDetailsDto = new UserDetailsDto(userDetails.getId(), userDetails.getUsername(),  userDetails.getAuthorities().stream().findFirst().get().toString(), jwtService.generateToken(auth.getUserName()));
         if (authenticate.isAuthenticated()) {
-            return jwtService.generateToken(auth.getUserName());
+//            return new ResponseEntity<>();
+//            return jwtService.generateToken(auth.getUserName());
+            return new ResponseEntity<>(userDetailsDto, HttpStatus.OK);
         } else {
             throw new UsernameNotFoundException("Invalid user request");
         }
