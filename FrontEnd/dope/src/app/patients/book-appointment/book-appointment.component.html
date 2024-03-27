@@ -99,7 +99,11 @@
                 <tr *ngFor="let slot of slots">
                 <td>{{ slot.startTime }}</td>
                 <td>{{ slot.endTime }}</td>
-                <td>{{ slot.available}}</td>
+                <!-- <td>{{ slot.available}}</td> -->
+                <td>
+                  <button class="btn btn-success" (click)="requestSlot(doc.id,slot.id)" *ngIf="slot.available==true">Request </button>
+                  <button class="btn btn-primary disabled" *ngIf="slot.available==false" >Booked</button>
+                </td>
                 </tr>
             </tbody>
             

@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { DoctorDto, TimeSlot } from 'src/app/models/doctor.model';
 import { BackendApiService } from 'src/app/services/backend-api.service';
@@ -44,5 +43,12 @@ export class BookAppointmentComponent implements OnInit {
    console.log(this.slots);
   }
 
+  requestSlot(docId:number,slotId:number)
+  {
+    let symptoms=prompt("Provide Your Symptoms: ");
+    this.backendApi.requestAppointment(docId,slotId,symptoms);
+    
+  }
 
 }
+

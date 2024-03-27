@@ -15,12 +15,16 @@ export class BackendApiService {
 
   allDoctors: any;
   allAppointments: any;
+  id:number = 0;
 
   getToken(): any {
     console.log("tokennnn: ", window.sessionStorage.getItem('token'));
     return window.sessionStorage.getItem('token');
   }
-
+  getUserId()
+  {
+    return this.id = + !window.sessionStorage.getItem('id');
+  }
   private headers = new HttpHeaders({
     // 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0dHQiLCJpYXQiOjE3MTE1MTIxNzksImV4cCI6MTcxMTUxNTc3OX0.4f7ECLdGkURoM_4PAd3zgbWH_OFGh-PD0iQ6OPDH91Q'
     'Authorization': 'Bearer ' + this.getToken()
@@ -80,6 +84,19 @@ export class BackendApiService {
       this.allAppointments = allAppointments;
       this.allAppointmentsDataChanged.emit(this.allAppointments);
       return this.allAppointments;
+    })
+  }
+
+  requestAppointment(docId: number, slotId: number, symptoms: any) {
+
+    this.getUserId();
+
+    let reqAppointment = new Appointment(1,this.id,docId,slotId,symptoms,"","REQUESTED")
+
+    this.httpClient.post<Appointment>(this.base_url+"/api/appointment",reqAppointment,{headers:this.headers})
+    .subscribe((response)=>{
+      console.log("apointment: ",response);
+      alert("Your request has been submitted\n Please wait till get Approval");
     })
   }
 
