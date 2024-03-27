@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+     <div class="col-md-6">
+      <a routerLink="/schedule-appointments">
+       <div class="card text-white bg-primary mb-3">
+         <div class="card-body">
+           <h5 class="card-title">Appointments to Approve</h5>
+           <p class="card-text">{{ appointmentsToApproveCount }}</p>
+         </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-6">
+      <a routerLink="/doctor-appointments">
+       <div class="card text-white bg-success mb-3">
+         <div class="card-body">
+           <h5 class="card-title">Approved Appointments</h5>
+           <p class="card-text">{{ approvedAppointmentsCount }}</p>
+         </div>
+       </div>
+      </a>
+     </div>
+  </div>
+ </div>

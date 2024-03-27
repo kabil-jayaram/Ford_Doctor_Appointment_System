@@ -24,6 +24,9 @@ public class AppointmentService implements IAppointmentService{
     }
 
     @Override
+    public List<Appointment> getAllAppointments() { return appointmentRepository.findAll(); }
+
+    @Override
     public List<Appointment> getAppointmentByPatientId(int patientId) {
         return appointmentRepository.findAllByPatientId(patientId);
     }

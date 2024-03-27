@@ -20,6 +20,11 @@ public class AppointmentController {
         return appointmentService.getAppointmentById(id);
     }
 
+    @GetMapping("/appointments")
+    public List<Appointment> getAllAppointments() {
+        return appointmentService.getAllAppointments();
+    }
+
     @PostMapping("/appointment")
     public Appointment addAppointment(@RequestBody Appointment appointment) {
         return appointmentService.addAppointment(appointment);
@@ -50,7 +55,7 @@ public class AppointmentController {
         return appointmentService.getAppointmentByPatientIdAndStatus(patientId, status);
     }
 
-    @GetMapping("/appointments")
+    @GetMapping("/appointments/status")
     public List<Appointment> getAppointmentByStatus(@RequestParam String status) {
         return appointmentService.getAppointmentByStatus(status);
     }

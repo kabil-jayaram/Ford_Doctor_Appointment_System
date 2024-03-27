@@ -10,7 +10,7 @@ import { BackendApiService } from 'src/app/services/backend-api.service';
 export class AppointmentsComponent implements OnInit {
   allAppointments:any;
   id:number = 0;
-  status:string = 'REQUESTED';
+  status:string = 'APPROVED';
   constructor(private backendApi:BackendApiService) {
 
    }
@@ -22,20 +22,10 @@ export class AppointmentsComponent implements OnInit {
       console.log("From Appointment Component:",data)
     });
     this.allAppointments=this.backendApi.getAllRequestedAppointments(this.id, this.status);
-    this.backendApi.allAppointmentsDataChanged.subscribe((data:any)=>{
+    this.backendApi.allRequestedAppointmentsDataChanged.subscribe((data:any)=>{
       this.allAppointments=data;
       console.log("component: ",this.allAppointments);
     })
     console.log(this.allAppointments);
   }
-
-  approveAppointment(appointment: any) {
-    appointment.status = 'APPROVED';
-    this.backendApi.updateAppointmentStatus(appointment);
-   }
-
-   rejectAppointment(appointment: any) {
-    appointment.status = 'REJECTED';
-    this.backendApi.updateAppointmentStatus(appointment);
-   }
 }

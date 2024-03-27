@@ -193,6 +193,14 @@ public class DoctorController {
         return responseEntity.getBody();
     }
 
+    @GetMapping("/appointments")
+    @PreAuthorize("hasAnyAuthority('USER','ADMIN')")
+    public Object getAllAppointments() {
+        ResponseEntity<Object> responseEntity = restTemplate.getForEntity("http://localhost:8080/doctorservice/api/appointments", Object.class);
+        System.out.println(responseEntity.getBody());
+        return responseEntity.getBody();
+    }
+
     @GetMapping("/appointments/doctor/{doctorId}")
     @PreAuthorize("hasAnyAuthority('USER','ADMIN')")
     public Object getAppointmentByDoctorid(@PathVariable("doctorId") int doctorId) {
@@ -226,10 +234,10 @@ public class DoctorController {
         return responseEntity.getBody();
     }
 
-    @GetMapping("/appointments")
+    @GetMapping("/appointments/status")
     @PreAuthorize("hasAnyAuthority('USER','ADMIN')")
     public Object getAppointmentByStatus(@RequestParam("status") String status) {
-        ResponseEntity<Object> responseEntity = restTemplate.getForEntity("http://localhost:8080/doctorservice/api/appointments?status="+status, Object.class);
+        ResponseEntity<Object> responseEntity = restTemplate.getForEntity("http://localhost:8080/doctorservice/api/appointments/status?status="+status, Object.class);
         System.out.println(responseEntity.getBody());
         return responseEntity.getBody();
     }

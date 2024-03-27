@@ -1,7 +1,8 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Appointment, DoctorDto, TimeSlot } from '../models/doctor.model';
-import { Observable, map } from 'rxjs';
+import { Observable, map, interval } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class BackendApiService {
 
   allDoctors: any;
   allAppointments: any;
+  allAppointmentsToApprove: any;
+  allRequestedAppointments: any;
   id:number = 0;
 
   getToken(): any {
@@ -63,7 +66,60 @@ export class BackendApiService {
       });
   }
 
+  allAppointmentsToApproveDataChanged = new EventEmitter<[]>();
+
+  getAllAppointmentsToApprove(id: number) {
+    const url = `${this.base_url}/api/appointments/doctor/${id}`;
+    return this.httpClient.get<any[]>(url ,{ headers: this.headers })
+    .pipe(
+      map(data => {
+        data.map(item => new Appointment(
+          item.id,
+          item.patientId,
+          item.doctorId,
+          item.timeSlot,
+          item.description,
+          item.diagnosis,
+          (item.status)
+        ));
+        console.log("data: ", data);
+        return data;
+      })
+    ).subscribe(allAppointments => {
+      this.allAppointmentsToApprove = allAppointments;
+      this.allAppointmentsToApproveDataChanged.emit(this.allAppointmentsToApprove);
+      return this.allAppointmentsToApprove;
+    })
+  }
+
   allAppointmentsDataChanged = new EventEmitter<[]>();
+
+  getAllAppointments() {
+    return this.httpClient.get<any[]>(this.base_url + "/api/appointments", { headers: this.headers })
+    .pipe(
+      map(data => {
+        data.map(item => new Appointment(
+          item.id,
+          item.patientId,
+          item.doctorId,
+          item.timeSlot,
+          item.description,
+          item.diagnosis,
+          (item.status)
+        ));
+        console.log("data: ", data);
+        return data;
+      })
+    ).subscribe(allAppointments => {
+      this.allAppointments = allAppointments;
+      this.allAppointmentsDataChanged.emit(this.allAppointments);
+      return this.allAppointments;
+    })
+  }
+
+
+
+  allRequestedAppointmentsDataChanged = new EventEmitter<[]>();
 
   getAllRequestedAppointments(id:number, status:string) {
     let params = new HttpParams()
@@ -79,15 +135,15 @@ export class BackendApiService {
           item.timeSlot,
           item.description,
           item.diagnosis,
-          (item.status).toUpperCase()
+          (item.status)
         ));
         console.log("data: ", data);
         return data;
       })
     ).subscribe(allAppointments => {
-      this.allAppointments = allAppointments;
-      this.allAppointmentsDataChanged.emit(this.allAppointments);
-      return this.allAppointments;
+      this.allRequestedAppointments = allAppointments;
+      this.allRequestedAppointmentsDataChanged.emit(this.allRequestedAppointments);
+      return this.allRequestedAppointments;
     })
   }
 

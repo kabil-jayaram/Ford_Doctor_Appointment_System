@@ -30,13 +30,13 @@ export class TimeSlot{
 }
 
 export class Appointment {
-  private id:number;
-  private patientId:number;
-  private doctorId:number;
-  private timeSlot:number;
-  private description:string;
-  private diagnosis:string;
-  private status:string;
+  public id:number;
+  public patientId:number;
+  public doctorId:number;
+  public timeSlot:number;
+  public description:string;
+  public diagnosis:string;
+  public status:string;
 
   constructor(id:number, pid:number, docid:number, ts:number, des:string, dia:string, status:string) {
     this.id = id;

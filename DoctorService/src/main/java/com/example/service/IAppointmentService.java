@@ -8,6 +8,7 @@ public interface IAppointmentService {
 
     public Appointment addAppointment(Appointment appointment);
     public Appointment getAppointmentById(int id);
+    public List<Appointment> getAllAppointments();
     public List<Appointment> getAppointmentByPatientId(int patientId);
     public List<Appointment> getAppointmentByPatientIdAndStatus(int patientId, String status);
     public List<Appointment> getAppointmentByDoctorId(int doctorId);

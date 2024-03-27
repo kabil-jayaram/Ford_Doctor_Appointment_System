@@ -21,7 +21,7 @@ export class ScheduleAppointmentsComponent {
       console.log("From Appointment Component:",data)
     });
     this.allAppointments=this.backendApi.getAllRequestedAppointments(this.id, this.status);
-    this.backendApi.allAppointmentsDataChanged.subscribe((data:any)=>{
+    this.backendApi.allRequestedAppointmentsDataChanged.subscribe((data:any)=>{
       this.allAppointments=data;
       console.log("component: ",this.allAppointments);
     })
