@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="Patient Service">
-      <change afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/entity/UserDetailsDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoctorService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/models/doctor/doctor.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/models/patient/patient.module.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/service/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/service/UserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringSecurity/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringSecurity/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringSecurity/target/classes/com/example/springsecurity/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/target/classes/com/example/springsecurity/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringSecurity/target/classes/com/example/springsecurity/service/UserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/target/classes/com/example/springsecurity/service/UserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
