@@ -1,1 +1,84 @@
-<p>appointments works!</p>
+<div class="card mb-3">
+  <div class="card-header">
+    <!-- <h5 class="card-title"> -->
+      <div>
+          <table class="table table-bordered mt-3" *ngFor="let appointment of allAppointments">
+          <thead>
+              <tr>
+              <th>Patient Id</th>
+              <th>Doctor Id</th>
+              <th>Time slot</th>
+              <th>Description</th>
+              <th>Diagnosis</th>
+              <th>Status</th>
+              </tr>
+          </thead>
+          <tbody *ngIf="appointment.status === 'REQUESTED'">
+              <tr >
+              <td>{{ appointment.patientId }}</td>
+              <td>{{ appointment.doctorId }}</td>
+              <td>{{ appointment.timeSlot }}</td>
+              <td>{{ appointment.description }}</td>
+              <td>{{ appointment.diagnosis }}</td>
+              <td>{{ appointment.status }}</td>
+              <td><button
+                  (click)="approve(appointment.patientId, appointment.doctorId)"
+                    class="btn btn-success"
+                  >
+                    Approve
+                  </button></td>
+              <td><button (click)="" class="btn-warning">Reject</button></td>
+              </tr>
+          </tbody>
+
+          </table>
+    </div>
+      <!-- <table border="0" class="exp">
+          <thead>
+              <th>asdfa</th>
+          <th>asdf</th>
+          <th>asdf</th>
+          </thead>
+        <tbody>
+          <tr class="exp-tr">
+              <td>{{ doc.name }}</td>
+              <td>{{ doc.specialization }}</td>
+              <td>
+                <button
+                (click)="showAppointment(doc.id)"
+                  class="btn btn-warning"
+                >
+                  See Slots
+                </button>
+              </td>
+            </tr>
+        </tbody>
+      </table> -->
+    <!-- </h5> -->
+  </div>
+  <div
+    class="card-body"
+    *ngIf=""
+  >
+    <div>
+          <table class="table table-bordered mt-3">
+          <thead>
+              <tr>
+              <th>Start time</th>
+              <th>End time</th>
+              <th>Availability</th>
+
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let slot">
+              <td>{{ slot.startTime }}</td>
+              <td>{{ slot.endTime }}</td>
+              <td>{{ slot.available}}</td>
+              </tr>
+          </tbody>
+
+          </table>
+    </div>
+  </div>
+</div>

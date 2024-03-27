@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { DoctorDto, TimeSlot } from '../models/doctor.model';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Appointment, DoctorDto, TimeSlot } from '../models/doctor.model';
 import { Observable, map } from 'rxjs';
 
 @Injectable({
@@ -14,6 +14,7 @@ export class BackendApiService {
   private base_url: string = "http://localhost:8081";
 
   allDoctors: any;
+  allAppointments: any;
 
   getToken(): any {
     console.log("tokennnn: ", window.sessionStorage.getItem('token'));
@@ -52,6 +53,34 @@ export class BackendApiService {
         this.allDoctorsDataChanged.emit(this.allDoctors);
         return this.allDoctors;
       });
+  }
+
+  allAppointmentsDataChanged = new EventEmitter<[]>();
+
+  getAllRequestedAppointments(id:number, status:string) {
+    let params = new HttpParams()
+    .set('doctorId', id)
+    .set('status', status);
+    return this.httpClient.get<any[]>(this.base_url + "/api/appointments/doctor", { params })
+    .pipe(
+      map(data => {
+        data.map(item => new Appointment(
+          item.id,
+          item.patientId,
+          item.doctorId,
+          item.timeSlot,
+          item.description,
+          item.diagnosis,
+          item.status
+        ));
+        console.log("data: ", data);
+        return data;
+      })
+    ).subscribe(allAppointments => {
+      this.allAppointments = allAppointments;
+      this.allAppointmentsDataChanged.emit(this.allAppointments);
+      return this.allAppointments;
+    })
   }
 
 

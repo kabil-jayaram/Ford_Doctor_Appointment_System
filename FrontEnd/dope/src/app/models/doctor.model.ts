@@ -28,3 +28,23 @@ export class TimeSlot{
         this.available=avail;
     }
 }
+
+export class Appointment {
+  private id:number;
+  private patientId:number;
+  private doctorId:number;
+  private timeSlot:number;
+  private description:string;
+  private diagnosis:string;
+  private status:string;
+
+  constructor(id:number, pid:number, docid:number, ts:number, des:string, dia:string, status:string) {
+    this.id = id;
+    this.patientId = pid;
+    this.doctorId = docid;
+    this.timeSlot = ts;
+    this.description = des;
+    this.diagnosis = dia;
+    this.status = status;
+  }
+}
