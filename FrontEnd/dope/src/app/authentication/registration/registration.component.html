@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin: 10px;">
   <div class="register">
       <h1 class="text-center">Registration Form</h1>
-      <form #register="ngForm" class="row g-3">
+      <form #register="ngForm" (ngSubmit)="registered(register)" class="row g-3">
         <div class="col-md-6">
           <label for="name" class="form-label">Name:</label>
           <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" ngModel #name="ngModel"/>
@@ -36,4 +36,5 @@
        </div>
       </form>
   </div>
+  <button (click)="login()" class="btn btn-danger">Login</button>
  </div>

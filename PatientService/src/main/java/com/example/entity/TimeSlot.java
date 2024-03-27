@@ -17,5 +17,7 @@ public class TimeSlot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String startTime;
+    private String endTime;
     private boolean available;
 }

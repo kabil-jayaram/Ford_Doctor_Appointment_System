@@ -1,10 +1,93 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { DoctorDto, TimeSlot } from '../models/doctor.model';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendApiService {
 
-  constructor() { }
-  
+  constructor(private httpClient: HttpClient) { }
+
+  private isLoggedIn: boolean = false;
+  private base_url: string = "http://localhost:8081";
+
+  allDoctors: any;
+
+  getToken(): any {
+    console.log("tokennnn: ", window.sessionStorage.getItem('token'));
+    return window.sessionStorage.getItem('token');
+  }
+
+  private headers = new HttpHeaders({
+    // 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0dHQiLCJpYXQiOjE3MTE1MTIxNzksImV4cCI6MTcxMTUxNTc3OX0.4f7ECLdGkURoM_4PAd3zgbWH_OFGh-PD0iQ6OPDH91Q'
+    'Authorization': 'Bearer ' + this.getToken()
+  });
+
+  allDoctorsDataChanged = new EventEmitter<[]>();
+
+  getAllDoctors() {
+
+    //  this.httpClient.get<DoctorDto>(this.base_url + "/api/doctors", { headers: headers }).subscribe((response) => {
+    //     console.log(response);
+    //  });
+    return this.httpClient.get<any[]>(this.base_url + "/api/doctors", { headers: this.headers })
+      .pipe(
+        map(data => {
+          data.map(item => new DoctorDto(
+            item.id,
+            item.name,
+            item.specialization,
+            item.timeSlot.map((slot: { id: number; startTime: string; endTime: string; available: boolean; }) => new TimeSlot(slot.id, slot.startTime, slot.endTime, slot.available))
+          ));
+
+          console.log("data: ", data);
+          return data;
+        })
+      )
+      .subscribe(allDoc => {
+        //console.log(allDoc);
+        this.allDoctors = allDoc;
+        this.allDoctorsDataChanged.emit(this.allDoctors);
+        return this.allDoctors;
+      });
+  }
+
+
+
+  // getAllDoctors()
+  // {
+  //   this.fetchAvailableDoctors();
+  //   this.allDoctorsDataChanged.emit(this.allDoctors);
+  //   console.log("service: ",this.allDoctors);
+  //   return this.allDoctors;
+  // }
+
+  //  fetchAvailableDoctors (){
+
+  //   try{
+  //     this.allDoctors =  this.httpClient
+  //     .get<any[]>(this.base_url+"/api/doctors",{headers:this.headers})
+  //     .pipe(
+  //       map(data => data.map(item => new DoctorDto(
+  //         item.id,
+  //         item.name,
+  //         item.specialization,
+  //         item.timeSlot.map((slot: { id: number; startTime: string; endTime: string; available: boolean; }) => new TimeSlot(slot.id, "start", "end", slot.available))
+  //       )))).subscribe(data=>{
+  //         this.allDoctors=data;
+  //         return this.allDoctors;
+  //       });
+
+  //       console.log(this.allDoctors);
+  //        return this.allDoctors;
+
+
+  //   }catch{
+  //     console.log("error in getting doctors data");
+  //   }
+
+  // }
+
 }

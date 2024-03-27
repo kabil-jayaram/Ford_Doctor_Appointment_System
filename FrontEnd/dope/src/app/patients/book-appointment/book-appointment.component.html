@@ -1,1 +1,146 @@
-<p>book-appointment works!</p>
+<h1>Book Appointments with our Doctors!</h1>
+<!-- <div class="container ">
+    <table class="doc-table" border="1"> 
+        <thead>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>show app</th>
+        </thead>
+        <tbody>
+            <div class=""*ngFor="let doc of allDoctors">
+            <tr >
+                <td>{{doc.name}}</td>
+                <td>{{doc.specialization}}</td>
+                <td><button class="btn btn-info" (click)="showAppointment(doc.id)">show Appointments</button></td>
+                                
+            </tr>
+            <div class="" *ngIf="toggle==true && doc.id==selectedDocId">
+                <h6>Available Slots</h6>
+                <tr *ngFor="let slot of slots">
+                    <td>{{slot.startTime}}</td>
+                    <td>{{slot.endTime}}</td>
+                    <td>{{slot.available}}</td>
+                </tr>
+            </div>
+        </div>
+            
+        </tbody>
+    </table>
+</div> -->
+
+<!--  -->
+
+<div class="card mb-3" *ngFor="let doc of allDoctors">
+    <div class="card-header">
+      <!-- <h5 class="card-title"> -->
+        <div>
+            <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Show slot</th>
+            
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                <td>{{ doc.name }}</td>
+                <td>{{ doc.specialization }}</td>
+                <td><button
+                    (click)="showAppointment(doc.id)"
+                      class="btn btn-warning"
+                    >
+                      See Slots
+                    </button></td>
+                </tr>
+            </tbody>
+            
+            </table>
+      </div>
+        <!-- <table border="0" class="exp">
+            <thead>
+                <th>asdfa</th>
+            <th>asdf</th>
+            <th>asdf</th>
+            </thead>
+          <tbody>
+            <tr class="exp-tr">
+                <td>{{ doc.name }}</td>
+                <td>{{ doc.specialization }}</td>
+                <td>
+                  <button
+                  (click)="showAppointment(doc.id)"
+                    class="btn btn-warning"
+                  >
+                    See Slots
+                  </button>
+                </td>
+              </tr>
+          </tbody>
+        </table> -->
+      <!-- </h5> -->
+    </div>
+    <div
+      class="card-body"
+      *ngIf="toggle==true && doc.id==selectedDocId"
+    >
+      <div>
+            <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                <th>Start time</th>
+                <th>End time</th>
+                <th>Availability</th>
+            
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let slot of slots">
+                <td>{{ slot.startTime }}</td>
+                <td>{{ slot.endTime }}</td>
+                <td>{{ slot.available}}</td>
+                </tr>
+            </tbody>
+            
+            </table>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Specialization</th>
+        <th>appointments</th>
+    </thead>
+    <tbody *ngFor="let doc of allDoctors">
+            <tr >
+                <td>{{doc.name}}</td>
+                <td>{{doc.specialization}}</td>
+                <td><button class="btn btn-info" (click)="showAppointment(doc.id)">show </button></td>  
+            </tr>
+            <span *ngIf="toggle==true && doc.id==selectedDocId">Available Slots</span>
+
+            <table *ngIf="toggle==true && doc.id==selectedDocId">
+                    <thead>
+                        <th>Start time</th>
+                        <th>End time</th>
+                        <th>IsAvailable</th>
+                    </thead>
+                    <tbody *ngFor="let slot of slots">
+                        <tr>
+                            <td>{{slot.startTime}}</td>
+                            <td>{{slot.endTime}}</td>
+                            <td>{{slot.available}}</td> 
+                        </tr>
+                    </tbody>
+           </table>
+            
+                
+            
+
+    </tbody>
+</table>
