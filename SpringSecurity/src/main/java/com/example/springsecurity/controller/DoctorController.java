@@ -172,6 +172,19 @@ public class DoctorController {
         return responseEntity.getBody();
     }
 
+    @PutMapping("/appointment")
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    public Object updateAppointment(@RequestBody Object appointment) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<Object> entity = new HttpEntity<>(appointment, headers);
+
+        ResponseEntity<Object> responseEntity = restTemplate.exchange("http://localhost:8080/doctorservice/api/appointment", HttpMethod.PUT, entity, Object.class);
+
+        System.out.println(responseEntity.getBody());
+        return responseEntity.getBody();
+    }
+
     @GetMapping("/appointments/{id}")
     @PreAuthorize("hasAnyAuthority('USER','ADMIN')")
     public Object getAppointmentById(@PathVariable("id") int id) {

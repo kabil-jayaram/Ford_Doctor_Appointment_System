@@ -21,9 +21,13 @@ export class BackendApiService {
     console.log("tokennnn: ", window.sessionStorage.getItem('token'));
     return window.sessionStorage.getItem('token');
   }
+  updatedUserId = new EventEmitter();
   getUserId()
   {
-    return this.id = + !window.sessionStorage.getItem('id');
+    this.id =  Number(window.sessionStorage.getItem('id'));
+    this.updatedUserId.emit(this.id);
+    console.log(this.id);
+    return this.id;
   }
   private headers = new HttpHeaders({
     // 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0dHQiLCJpYXQiOjE3MTE1MTIxNzksImV4cCI6MTcxMTUxNTc3OX0.4f7ECLdGkURoM_4PAd3zgbWH_OFGh-PD0iQ6OPDH91Q'
@@ -65,7 +69,7 @@ export class BackendApiService {
     let params = new HttpParams()
     .set('doctorId', id)
     .set('status', status);
-    return this.httpClient.get<any[]>(this.base_url + "/api/appointments/doctor", { params })
+    return this.httpClient.get<any[]>(this.base_url + "/api/appointments/doctor", { headers: this.headers, params })
     .pipe(
       map(data => {
         data.map(item => new Appointment(
@@ -75,7 +79,7 @@ export class BackendApiService {
           item.timeSlot,
           item.description,
           item.diagnosis,
-          item.status
+          (item.status).toUpperCase()
         ));
         console.log("data: ", data);
         return data;
@@ -85,6 +89,12 @@ export class BackendApiService {
       this.allAppointmentsDataChanged.emit(this.allAppointments);
       return this.allAppointments;
     })
+  }
+
+
+  updateAppointmentStatus(appointment: Appointment) {
+    return this.httpClient.put(this.base_url + "/api/appointment", appointment, { headers: this.headers }).subscribe(response =>
+      console.log(response));
   }
 
   requestAppointment(docId: number, slotId: number, symptoms: any) {

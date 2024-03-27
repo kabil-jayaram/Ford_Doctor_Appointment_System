@@ -25,6 +25,11 @@ public class AppointmentController {
         return appointmentService.addAppointment(appointment);
     }
 
+    @PutMapping("/appointment")
+    public Appointment updateAppointment(@RequestBody Appointment appointment) {
+        return appointmentService.updateAppointment(appointment);
+    }
+
     @GetMapping("/appointments/doctor/{doctorId}")
     public List<Appointment> getAppointmentByDoctorId(@PathVariable("doctorId") int doctorId) {
         return appointmentService.getAppointmentByDoctorId(doctorId);

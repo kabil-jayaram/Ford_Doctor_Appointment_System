@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BackendApiService } from 'src/app/services/backend-api.service';
 
 @Component({
-  selector: 'app-appointments',
-  templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.css']
+  selector: 'app-schedule-appointments',
+  templateUrl: './schedule-appointments.component.html',
+  styleUrls: ['./schedule-appointments.component.css']
 })
-
-export class AppointmentsComponent implements OnInit {
+export class ScheduleAppointmentsComponent {
   allAppointments:any;
   id:number = 0;
   status:string = 'REQUESTED';

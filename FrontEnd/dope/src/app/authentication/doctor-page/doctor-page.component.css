@@ -9,6 +9,7 @@
 
  .sidebar {
   flex: 0 0 auto;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #f8f9fa;
   padding: 20px;

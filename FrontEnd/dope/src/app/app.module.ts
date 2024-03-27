@@ -12,6 +12,7 @@ import { AppointmentComponent } from './patients/appointment/appointment.compone
 import { BookAppointmentComponent } from './patients/book-appointment/book-appointment.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ScheduleAppointmentsComponent } from './doctors/schedule-appointments/schedule-appointments.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     PatientPageComponent,
     AppointmentsComponent,
     AppointmentComponent,
-    BookAppointmentComponent
+    BookAppointmentComponent,
+    ScheduleAppointmentsComponent
   ],
   imports: [
     BrowserModule,
