@@ -1,3 +1,22 @@
-<form>
-
-</form>
+<div class="container-fluid" style="margin: 10px;">
+    <div class="login">
+        <h1 class="text-center">Login Form</h1>
+        <form #login="ngForm" (ngSubmit)="loggingIn(login)" class="row g-3">
+          <div class="">
+            <label for="userName" class="form-label">Username:</label>
+            <input type="text" class="" name="userName" id="userName" class="form-control" placeholder="Enter your Username" ngModel #userName="ngModel"/>
+          </div>
+          <div class="">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your Password" ngModel #password="ngModel">
+          </div>
+          <div class="col-12">
+           <button type="submit" name="submit" id="submit" class="btn btn-primary m-4">Submit</button>
+           <button type="reset" name="clear" id="clear" class="btn btn-secondary m-4">Clear</button>
+           <button (click)="register()" class="btn btn-warning">Don't Have an Account? Register</button>
+         </div>
+        </form>
+    </div>
+    
+   </div>
+  

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ScheduleAppointmentsComponent } from './doctors/schedule-appointments/schedule-appointments.component';
 import { DashboardComponent } from './doctors/dashboard/dashboard.component';
+import { PatientDashboardComponent } from './patients/patient-dashboard/patient-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DashboardComponent } from './doctors/dashboard/dashboard.component';
     AppointmentComponent,
     BookAppointmentComponent,
     ScheduleAppointmentsComponent,
-    DashboardComponent
+    DashboardComponent,
+    PatientDashboardComponent
   ],
   imports: [
     BrowserModule,
