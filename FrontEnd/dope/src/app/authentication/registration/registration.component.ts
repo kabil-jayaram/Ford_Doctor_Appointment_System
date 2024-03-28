@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { LoginUser } from 'src/app/models/user.model';
+import { BackendApiService } from 'src/app/services/backend-api.service';
 
 @Component({
   selector: 'app-registration',
@@ -19,10 +20,9 @@ export class RegistrationComponent implements OnInit {
     this.authService.setLoginStatus();
 
   }
-  lu = new LoginUser("ttt","test");
   login()
   {
-    
-    this.authService.login(this.lu);
+    this.authService.setLoginOrRegiser();
+    // this.authService.login(this.lu);
   }
 }

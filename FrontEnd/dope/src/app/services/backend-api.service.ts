@@ -24,6 +24,17 @@ export class BackendApiService {
     console.log("tokennnn: ", window.sessionStorage.getItem('token'));
     return window.sessionStorage.getItem('token');
   }
+  getNameChanged = new EventEmitter<any>();
+  getName(): any {
+    console.log("userName: ", window.sessionStorage.getItem('userName'));
+    this.getNameChanged.emit(window.sessionStorage.getItem('userName'));
+    return window.sessionStorage.getItem('userName');
+  }
+  getRoleChanged = new EventEmitter<any>();
+  getRole(): any {
+
+    return window.sessionStorage.getItem('roles');
+  }
   updatedUserId = new EventEmitter();
   getUserId()
   {
@@ -163,6 +174,34 @@ export class BackendApiService {
     .subscribe((response)=>{
       console.log("apointment: ",response);
       alert("Your request has been submitted\n Please wait till get Approval");
+    })
+  }
+
+  allPatientAppointment:any;
+  allPatientppointmentsDataChanged = new EventEmitter<[]>();
+  getAllPatientAppointments(id:number, status:string) {
+    let params = new HttpParams()
+    .set('patientId', id)
+    .set('status', status);
+    return this.httpClient.get<any[]>(this.base_url + "/api/appointments/patient", { headers: this.headers, params })
+    .pipe(
+      map(data => {
+        data.map(item => new Appointment(
+          item.id,
+          item.patientId,
+          item.doctorId,
+          item.timeSlot,
+          item.description,
+          item.diagnosis,
+          (item.status)
+        ));
+        console.log("patient approved appointments: ", data);
+        return data;
+      })
+    ).subscribe(allAppointments => {
+      this.allPatientAppointment = allAppointments;
+      this.allPatientppointmentsDataChanged.emit(this.allPatientAppointment);
+      return this.allPatientAppointment;
     })
   }
 

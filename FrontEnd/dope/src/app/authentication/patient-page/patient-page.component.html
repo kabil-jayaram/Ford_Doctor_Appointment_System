@@ -7,25 +7,25 @@
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="#" class="nav-link active" aria-current="page">
+      <a routerLink="/patient-dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link link-body-emphasis" aria-current="page">
         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
         Dashboard
       </a>
     </li>
     <li>
-      <a routerLink="/book" class="nav-link link-body-emphasis">
+      <a routerLink="/book" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link link-body-emphasis">
         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
         Book Appointment
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link link-body-emphasis">
+      <a href="#" routerLink="/patient-appointment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link link-body-emphasis">
         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
         My Appointments
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link link-body-emphasis">
+      <a href="#" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link link-body-emphasis">
         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
         Profile
       </a>

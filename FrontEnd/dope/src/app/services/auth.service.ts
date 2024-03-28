@@ -1,8 +1,8 @@
 
 import { HttpClientModule, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User,LoggedUserDetails,LoginUser } from '../models/user.model';
+import { User, LoggedUserDetails, LoginUser } from '../models/user.model';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { BackendApiService } from './backend-api.service';
 
@@ -11,10 +11,25 @@ import { BackendApiService } from './backend-api.service';
 })
 export class AuthService {
 
-  constructor(private httpClient: HttpClient,private backendApi:BackendApiService) { }
+  constructor(private httpClient: HttpClient, private backendApi: BackendApiService) { }
 
   private isLoggedIn: boolean = false;
   private base_url: string = "http://localhost:8081";
+
+  private isLogin: boolean = false;
+
+  loginOrRegisterChanged = new EventEmitter<any>();
+  getLoginOrRegiser() {
+    this.loginOrRegisterChanged.emit(this.isLogin);
+    this.backendApi.getNameChanged.emit(window.sessionStorage.getItem('userName'));
+    return this.isLogin;
+  }
+  setLoginOrRegiser() {
+    this.isLogin = !this.isLogin;
+    this.loginOrRegisterChanged.emit(this.isLogin);
+    this.backendApi.getNameChanged.emit(window.sessionStorage.getItem('userName'));
+    return this.isLogin;
+  }
 
   getLoginStatus() {
     return this.isLoggedIn;
@@ -71,22 +86,26 @@ export class AuthService {
           return throwError(error);
         })
       ).subscribe(
-          userDetails=>{
-            console.log(userDetails);
-            this.userData = userDetails;
-            this.saveTokenToBrowser();
-            alert("user logged successfully!");
-            this.backendApi.getUserId();
-          }
-        )
+        userDetails => {
+
+          console.log(userDetails);
+          this.userData = userDetails;
+          this.saveTokenToBrowser();
+          this.backendApi.getUserId();
+          alert("user logged successfully!");
+          let role = window.sessionStorage.getItem('roles');
+          this.backendApi.getRoleChanged.emit(role);
+          this.backendApi.getName();
+        }
+      )
 
   }
 
   saveTokenToBrowser() {
     window.sessionStorage.setItem('token', this.userData.authToken);
-    window.sessionStorage.setItem('id',this.userData.id);
-    window.sessionStorage.setItem('userName',this.userData.userName);
-    window.sessionStorage.setItem('roles',this.userData.roles);
+    window.sessionStorage.setItem('id', this.userData.id);
+    window.sessionStorage.setItem('userName', this.userData.userName);
+    window.sessionStorage.setItem('roles', this.userData.roles);
   }
 
   logout() {
