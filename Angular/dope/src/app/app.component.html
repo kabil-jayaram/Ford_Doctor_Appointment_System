@@ -1,0 +1,9 @@
+<div *ngIf="!isLoggedIn()">
+  <app-home></app-home>
+  <!-- <app-registration *ngIf="isLogin==false"></app-registration>
+  <app-login *ngIf="isLogin==true"></app-login> -->
+</div>
+<div *ngIf="isLoggedIn()">
+  <app-doctor-page *ngIf="role === 'ADMIN'"></app-doctor-page>
+  <app-patient-page *ngIf="role === 'USER'"></app-patient-page>
+</div>

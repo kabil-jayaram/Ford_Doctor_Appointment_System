@@ -1,0 +1,121 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body and html take up the full height of the viewport */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+ }
+
+ /* Grid Container */
+ .grid-container {
+  display: grid;
+  grid-template-rows: auto auto; /* Creates two rows with automatic height */
+  gap: 20px; /* Adds some space between the rows */
+  padding: 20px; /* Adds padding around the grid container */
+  height: 100%; /* Ensure the grid container takes up the full height */
+  background-image: url(https://images.unsplash.com/photo-1554734867-bf3c00a49371?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-position: center; /* Center the background image */
+ }
+
+ /* Home Container */
+ .home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Padding inside the home container */
+  border-radius: 10px; /* Rounded corners for the home container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  height: 100%; /* Ensure the home container takes up the full height */
+  width: 100%; /* Ensure the home container takes up the full width */
+  position: relative; /* Needed for absolute positioning of pseudo-elements */
+ }
+
+ .home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the pseudo-element covers the entire container */
+  height: 100%; /* Ensure the pseudo-element covers the entire container */
+  background: inherit; /* Inherit the background from the home container */
+  filter: blur(20%); /* Apply blur to the pseudo-element */
+  border-radius: 10px; /* Rounded corners for the home container */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+ }
+
+ /* Welcome Section */
+ .welcome-section {
+  text-align: center;
+  color: #333; /* Dark text for readability */
+ }
+
+ /* Translucent Section */
+ .translucent-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* White text for contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Padding inside the translucent section */
+  border-radius: 10px; /* Rounded corners for the translucent section */
+ }
+
+ /* Translucent Text */
+ .translucent-text {
+  text-align: center;
+  color: white; /* White text for contrast */
+ }
+
+ /* Buttons */
+ .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space above the buttons */
+ }
+
+ .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+ }
+
+ .btn-primary {
+  background-color: #007bff;
+  color: white; /* White text for contrast */
+ }
+
+ .btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+ }
+
+ .btn-secondary {
+  background-color: #6c757d;
+  color: white; /* White text for contrast */
+ }
+
+ .btn-secondary:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+ }
+
+ /* Media Queries for Responsiveness */
+ @media (max-width: 768px) {
+  .grid-container {
+     padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .welcome-section, .translucent-section {
+     padding: 5px; /* Reduce padding on smaller screens */
+  }
+
+  .buttons {
+     gap: 5px; /* Reduce space between buttons on smaller screens */
+  }
+ }

@@ -53,7 +53,7 @@ public class DoctorController {
 
     // below is for all dto controls that are sent to patient microservice
     @GetMapping("/doctors")
-    @PreAuthorize("hasAuthority('ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ADMIN','USER')")
     public Object getDoctorsDto() {
         ResponseEntity<Object> responseEntity = restTemplate.getForEntity("http://localhost:8082/patientservice/api/doctors", Object.class);
 

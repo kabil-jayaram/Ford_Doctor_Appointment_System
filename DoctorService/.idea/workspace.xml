@@ -7,22 +7,17 @@
     <list default="true" id="054e6b01-83f4-47ce-ab32-3c07feec9aad" name="Changes" comment="DoctorService Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/doctor-page/doctor-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/doctor-page/doctor-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/doctor-page/doctor-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/doctor-page/doctor-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/patient-page/patient-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/patient-page/patient-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/registration/registration.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/registration/registration.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/registration/registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/registration/registration.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/authentication/registration/registration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/patients/appointment/appointment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/patients/appointment/appointment.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/patients/appointment/appointment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/patients/appointment/appointment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/models/patient.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/models/patient.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/dope/src/app/services/backend-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/dope/src/app/services/backend-api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PatientService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PatientService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/java/com/example/springsecurity/controller/DoctorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringSecurity/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringSecurity/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/target/classes/application.properties" afterDir="false" />
     </list>
@@ -67,7 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.DoctorAppointmentSystemApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.DoctorServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Tamil&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/kjayar18/Library/CloudStorage/OneDrive-azureford/Ford Project/Ford_Doctor_Appointment_System/DoctorService/src/main/java/com/example&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -146,6 +141,8 @@
       <workItem from="1711553135144" duration="20000" />
       <workItem from="1711553161645" duration="2080000" />
       <workItem from="1711607665047" duration="387000" />
+      <workItem from="1711610068920" duration="3597000" />
+      <workItem from="1711697496137" duration="617000" />
     </task>
     <task id="LOCAL-00001" summary="DoctorService Update">
       <option name="closed" value="true" />
